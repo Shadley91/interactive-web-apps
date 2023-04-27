@@ -1,4 +1,4 @@
-console.warn(Scanning);
+console.warn("Security scan starting");
 /*
 It is important to show the following message in order to:
 - to assure users
