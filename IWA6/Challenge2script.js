@@ -7,17 +7,11 @@ const hourOfDay = 00;
 const minuteOfDay = 00;
 
 // Only change below this line
-const taxAsDecimal = tax / 100;
-const startingAfterTax = salary * (1 - taxAsDecimal);
-const balance = startingAfterTax - transport - food - rent;
-if (
-  hourOfDay !== null &&
-  minuteOfDay !== null &&
-  hourOfDay == "00" &&
-  minuteOfDay == "00"
-) {
-  const taxAsDecimal = tax / 100;
-  const startingAfterTax = salary * 1 - taxAsDecimal;
-  const balance = startingAfterTax - transport - food - rent;
+const newTime = hourOfDay === 0 && minuteOfDay === 0;
+let balance = undefined;
+if (newTime) {
+  const taxAsDecimal = parseInt(tax) / 100;
+  const startingAfterTax = salary * (1 - taxAsDecimal);
+  balance = startingAfterTax - transport - food - rent;
 }
 console.log(balance.toFixed(2));
