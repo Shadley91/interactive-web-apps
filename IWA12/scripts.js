@@ -29,17 +29,17 @@ const STATUS_MAP = {
 
 // Edit below line
 
-const statusElement0 = document.querySelector(".status");
+const statusElement0 = document.querySelector("#book1 .status");
 const reserve0 = document.querySelector(".reserve");
 const checkout0 = document.querySelector(".checkout");
 const checkin0 = document.querySelector(".checkin");
 
-const statusElement1 = document.querySelector(".status");
+const statusElement1 = document.querySelector("#book2 .status");
 const reserve1 = document.querySelector(".reserve");
 const checkout1 = document.querySelector(".checkout");
 const checkin1 = document.querySelector(".checkin");
 
-const statusElement2 = document.querySelector(".status");
+const statusElement2 = document.querySelector("#book3 .status");
 const reserve2 = document.querySelector(".reserve");
 const checkout2 = document.querySelector(".checkout");
 const checkin2 = document.querySelector(".checkin");
