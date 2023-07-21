@@ -13,6 +13,8 @@ const sarahPostal = "0310";
 
 // Only change below this line
 
+// balance, accessId and age has been commented out, as these details are not required for the desired output
+
 const leo = {
   name: leoName,
   //balance: leoBalance,
