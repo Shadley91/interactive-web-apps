@@ -64,7 +64,7 @@ const createData = () => {
 const addCell = (inner, classString, value) => {
   const today = new Date().getDate();
   const isToday = today === value;
-  const todayClass = isToday ? "table_ _cell_today" : "";
+  const todayClass = isToday ? "table__cell_today" : "";
 
   const result = /* html */ `
       ${inner}
@@ -91,14 +91,18 @@ const createHtml = (data) => {
         (week % 2 === 0 && !isToday) || (week % 2 !== 0 && isToday);
 
       let classString = "table__cell";
-      if (isToday) classString += " table__cell_today";
-      if (isWeekend) classString += " table__cell_weekend";
-      if (isAlternate) classString += " table__cell_alternate";
 
-      inner += addCell(inner, classString, value);
+      if (isToday) classString = `${isToday} table__cell_today`;
+      if (isWeekend) classString = `${isWeekend} table__cell_weekend`;
+      if (isAlternate) classString = `${isAlternate} table__cell_alternate`;
+
+      inner = addCell(inner, classString, value);
     }
 
-    result += `<tr>${inner}</tr>`;
+    result = `
+          ${result}
+          <tr>${inner}</tr>
+      `;
   }
 
   return result;
